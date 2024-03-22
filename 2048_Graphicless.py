@@ -184,9 +184,9 @@ def NEAT():
     print("Generation 1")
 
     try:
-        os.mkdir("3-7/Generation_1")
+        os.mkdir("Example_Learning/Generation_1")
     except FileExistsError:
-        filepath = "3-7/Generation_1"
+        filepath = "Example_Learning/Generation_1"
 
         if os.listdir(filepath):
             clear = input("Need to delete data from {}. Type \"clear\" if you want to clear: ".format(filepath))
@@ -214,7 +214,7 @@ def NEAT():
 
         individuals[individual] = total_score / num_trials
 
-        with open("3-7/Generation_1/{}_Number_{}.txt".format(individuals[individual], i), "w") as fh:
+        with open("Example_Learning/Generation_1/{}_Number_{}.txt".format(individuals[individual], i), "w") as fh:
             output_text = ""
 
             for layer in layers:
@@ -257,9 +257,9 @@ def NEAT():
         print("Generation", generation)
 
         try:
-            os.mkdir("3-7/Generation_" + str(generation))
+            os.mkdir("Example_Learning/Generation_" + str(generation))
         except FileExistsError:
-            filepath = "3-7/Generation_" + str(generation)
+            filepath = "Example_Learning/Generation_" + str(generation)
 
             if os.listdir(filepath):
                 clear = input("Need to delete data from {}. Type \"clear\" if you want to clear: ".format(filepath))
@@ -280,7 +280,7 @@ def NEAT():
 
             individuals[individual] = total_score / num_trials
 
-            with open("3-7/Generation_{}/{}_Number_{}.txt".format(generation, individuals[individual], count),
+            with open("Example_Learning/Generation_{}/{}_Number_{}.txt".format(generation, individuals[individual], count),
                       "w") as fh:
                 output_text = ""
 
